@@ -1,6 +1,6 @@
 FROM alpine/helm
 
-RUN apk add npm
+RUN apk add npm && rm -rf /var/cache/apk/*
 RUN npm install -g @sentry/cli --unsafe-perm
 
 ENTRYPOINT [""]
